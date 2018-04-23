@@ -1,0 +1,39 @@
+﻿<Window x:Class="Stock2DChart.Window1" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" Title="Window1" Height="350" Width="620">
+    <Grid>
+        <dxc:ChartControl Name="chartControl1">
+            <dxc:ChartControl.Diagram>
+                <dxc:XYDiagram2D>
+                    <dxc:XYDiagram2D.Series>
+                        <dxc:StockSeries2D ArgumentScaleType="DateTime">
+                            <dxc:StockSeries2D.Points>
+                                <dxc:SeriesPoint Argument="1/1/2009" dxc:FinancialSeries.CloseValue="27" dxc:FinancialSeries.HighValue="28" dxc:FinancialSeries.LowValue="24" dxc:FinancialSeries.OpenValue="25" />
+                                <dxc:SeriesPoint Argument="1/2/2009" dxc:FinancialSeries.CloseValue="32" dxc:FinancialSeries.HighValue="35" dxc:FinancialSeries.LowValue="26" dxc:FinancialSeries.OpenValue="27" />
+                                <dxc:SeriesPoint Argument="1/3/2009" dxc:FinancialSeries.CloseValue="29" dxc:FinancialSeries.HighValue="35" dxc:FinancialSeries.LowValue="27" dxc:FinancialSeries.OpenValue="32" />
+                                <dxc:SeriesPoint Argument="1/4/2009" dxc:FinancialSeries.CloseValue="36" dxc:FinancialSeries.HighValue="37" dxc:FinancialSeries.LowValue="29" dxc:FinancialSeries.OpenValue="29" />
+                                <dxc:SeriesPoint Argument="1/5/2009" dxc:FinancialSeries.CloseValue="33" dxc:FinancialSeries.HighValue="37" dxc:FinancialSeries.LowValue="32" dxc:FinancialSeries.OpenValue="36" />
+                            </dxc:StockSeries2D.Points>
+                            <dxc:StockSeries2D.PointOptions>
+                                <dxc:PointOptions dxc:FinancialSeries2D.ValueToDisplay="HighValue" />
+                            </dxc:StockSeries2D.PointOptions>
+                            <!--region #Model-->
+                            <dxc:StockSeries2D.Model>
+                                <dxc:ArrowsStock2DModel />
+                            </dxc:StockSeries2D.Model>
+                            <!--endregion #Model-->
+                        </dxc:StockSeries2D>
+                    </dxc:XYDiagram2D.Series>
+                    <dxc:XYDiagram2D.AxisX>
+                        <dxc:AxisX2D>
+                            <dxc:AxisX2D.DateTimeOptions>
+                                <dxc:DateTimeOptions Format="MonthAndDay" />
+                            </dxc:AxisX2D.DateTimeOptions>
+                        </dxc:AxisX2D>
+                    </dxc:XYDiagram2D.AxisX>
+                    <dxc:XYDiagram2D.AxisY>
+                        <dxc:AxisY2D Range="AlwaysShowZeroLevel=False" />
+                    </dxc:XYDiagram2D.AxisY>
+                </dxc:XYDiagram2D>
+            </dxc:ChartControl.Diagram>
+        </dxc:ChartControl>
+    </Grid>
+</Window>
